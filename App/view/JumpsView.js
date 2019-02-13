@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {TouchableHighlight, Text,View,StyleSheet} from 'react-native'
+import {TouchableHighlight, Text,View,StyleSheet,Button} from 'react-native'
 import MyToastUtils from "../utils/MyToastUtils";
+
 
 export default class JumpsView extends  React.Component {
     // static navigationOptions = {
@@ -20,22 +21,32 @@ export default class JumpsView extends  React.Component {
             {/**/}
         {/*</View>*/}
 
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text>JumpsView Screen</Text>
-            <Button
-                title="Go to Details... again"
-                onPress={() => this.props.navigation.push('Details')}
-            />
-            <Button
-                title="Go to Home"
-                onPress={() => this.props.navigation.navigate('Home')}
-            />
-            <Button
-                title="Go back"
-                onPress={() => this.props.navigation.goBack()}
-            />
-        </View>
+        return(
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                <Text>JumpsView Screen</Text>
+                <Button
+                    title="Go to FadeInViewTest... again"
+                    // onPress={() => this.props.navigation.push('FadeInView')}
+                    onPress={() => this.props.navigation.navigate('FadeInViewTest')}
+                    // onPress={gotoFadeInView}
+                />
+                <Button
+                    title="Go to MoviesListView"
+                    onPress={() => this.props.navigation.navigate('MoviesListView')}
+                    // onPress={gotoMoviesListView}
+                />
+                <Button
+                    title="Go back"
+                    onPress={() => this.props.navigation.goBack()}
+                    // onPress={gotoBack}
+                />
+            </View>
+
+        )
+
+
     }
+
 
     // pressShowToast = () => {
     //     console.log("进入 pressShowToast，点击一下之前");
@@ -51,7 +62,16 @@ export default class JumpsView extends  React.Component {
 }
 
 
-
+// function gotoFadeInView(){
+//     this.props.navigation.navigate('FadeInView');
+// }
+// function gotoMoviesListView(){
+//     this.props.navigation.navigate('MoviesListView')
+// }
+//
+// function gotoBack(){
+//     this.props.navigation.goBack()
+// }
 const styles = StyleSheet.create({
     container:{
         flex: 1,
