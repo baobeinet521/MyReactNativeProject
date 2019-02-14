@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {createSwitchNavigator, createAppContainer} from 'react-navigation'
-import FadeInView from './App/AnimateUtils/FadeInView';
+import FadeInView from './App/UtilsAnimate/FadeInView';
 import JumpsView from './App/view/JumpsView';
 import FadeInViewTest from './App/view/FadeInViewTest';
 import ImageViewTest from './App/view/ImageViewTest'
@@ -16,6 +16,7 @@ import MoviesListView from  './App/view/MoviesListView'
 import {
   Platform,
 } from 'react-native';
+import wifiView from "./App/view/wifiView";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -45,6 +46,9 @@ function makeRootNavigator() {
         },
         MoviesListView:{
             screen:MoviesListView
+        },
+        wifiView:{
+            screen:wifiView
         }
     }, {
         initialRouteName:'JumpsView'

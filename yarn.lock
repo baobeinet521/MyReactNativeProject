@@ -5013,6 +5013,11 @@ react-native-navigation@^2.8.0:
     react-lifecycles-compat "2.0.0"
     tslib "1.9.3"
 
+react-native-network-info@^4.0.1:
+  version "4.0.1"
+  resolved "http://registry.npm.taobao.org/react-native-network-info/download/react-native-network-info-4.0.1.tgz#e0242cfec0d9c0e1c6c32b8df596bb4c3223a5a3"
+  integrity sha1-4CQs/sDZwOHGwyuN9Za7TDIjpaM=
+
 react-native-safe-area-view@^0.12.0:
   version "0.12.0"
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.12.0.tgz#5c312f087300ecf82e8541c3eac25d560e147f22"

@@ -25,23 +25,32 @@ export default class JumpsView extends  React.Component {
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                 <Text>JumpsView Screen</Text>
                 <Button
+                    style={styles.button_style}
                     title="Go to FadeInViewTest... again"
                     // onPress={() => this.props.navigation.push('FadeInView')}
                     onPress={() => this.props.navigation.navigate('FadeInViewTest')}
                     // onPress={gotoFadeInView}
                 />
                 <Button
+                    style={styles.button_style}
                     title="Go to MoviesListView"
                     onPress={() => this.props.navigation.navigate('MoviesListView')}
                     // onPress={gotoMoviesListView}
                 />
                 <Button
+                    style={styles.button_style}
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
                     // onPress={gotoBack}
                 />
-            </View>
 
+                <Button
+                    style={styles.button_style}
+                    title="wifi测试页面"
+                    onPress={() => this.props.navigation.navigate('wifiView')}
+                    // onPress={gotoBack}
+                />
+            </View>
         )
 
 
@@ -80,6 +89,7 @@ const styles = StyleSheet.create({
         width: 180,
         height: 60,
         marginTop: 10,
+        marginBottom:10,
         backgroundColor: '#175092'
     }
 });
