@@ -15,6 +15,7 @@ import ImageViewTest from './App/view/ImageViewTest'
 import MoviesListView from  './App/view/MoviesListView'
 import {
   Platform,
+  NativeModules
 } from 'react-native';
 import wifiView from "./App/view/wifiView";
 
@@ -22,6 +23,7 @@ const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu'
 });
+const SplashScreenModule = NativeModules.SplashScreen
 export default class App extends Component {
 
 
@@ -31,6 +33,11 @@ export default class App extends Component {
         return <Navigator />
     }
 
+    componentDidMount(){
+        console.log("调用  componentDidMount   11111");
+        SplashScreenModule.hide();
+        console.log("调用  componentDidMount   2222222");
+    }
 }
 
 function makeRootNavigator() {
